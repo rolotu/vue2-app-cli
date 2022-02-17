@@ -1,4 +1,7 @@
-# wx-vote
+# vue2-app-cli
+
+## 简介
+基于vue-cli4实现的移动端H5开发模板
 
 ## Project setup
 ```
