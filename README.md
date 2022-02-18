@@ -2,6 +2,7 @@
 
 ## 简介
 基于vue2实现的移动端H5开发模板
+技术栈：vue2 + vuex + vue-router + vant基于rem适配 + axios
 
 ## Project setup
 ```

@@ -1,4 +1,6 @@
 const path = require('path')
+const autoprefixer = require('autoprefixer')
+const pxtorem = require('postcss-pxtorem')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -21,18 +23,17 @@ module.exports = {
     }
   },
   css: {
-    extract: true,
-    sourceMap: true,
     loaderOptions: {
       postcss: {
         plugins: [
-          require('postcss-px2rem')({
-            remUnit: 100
+          autoprefixer(),
+          pxtorem({
+            rootValue: 37.5,
+            propList: ['*']
           })
         ]
       }
-    },
-    modules: false
+    }
   },
   chainWebpack: config => {
     config.resolve.alias
